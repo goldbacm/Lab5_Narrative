@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Link to Leaflet's CSS file -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+
+    <!-- Link to Leaflet's JS file -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+    <!-- Link to your custom stylesheet -->
+    <link rel="stylesheet" href="/css/style.css"/> <!-- in class he did css/--> 
+
+    <!-- Link to turf js -->
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
+
+</head>
+
+<body>
+    <h1> Lab 5: Narrative Cartography </h1>
+
+   <p id="subheading"> Census Tracts and Hazardous Waste? Oh My! </p>
+      
+    <p id="maptitle"> Map 1: Choropleth Counts </p>
+    <!-- Map container div 1 -->
+    <div id="map1"></div>
+
+    <p id="maptitle2"> Map 2: Choropleth Population </p>
+    <!-- Map container div 2 -->
+    <div id="map2"></div>
+
+    
+    <!-- Your custom JavaScript file -->
+    <script src="js\lab5.js"></script> <!-- Corrected file path (forward slashes) he had it outside of -->
+</body>
+
+
