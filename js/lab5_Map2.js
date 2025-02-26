@@ -43,14 +43,14 @@ fetch('data/CensusTracts.geojson')
                     var tractArea = turf.area(censusTract); // Area in square meters
                     tractAreas[censusTractId] = tractArea;
 
-                    // Log the tract area and hazard points count for debugging
-                    console.log(`Tract ID: ${censusTractId}, Area: ${tractArea} sq meters`);
+                    // // Log the tract area and hazard points count for debugging
+                    // console.log(`Tract ID: ${censusTractId}, Area: ${tractArea} sq meters`);
 
                     // Filter hazard points that fall inside the census tract
                     var pointsInCensusTract = turf.pointsWithinPolygon(hazardPoints, censusTract.geometry);
 
-                    // Log the number of points in each census tract
-                    console.log(`Points in Tract ID ${censusTractId}: ${pointsInCensusTract.features.length}`);
+                    // // Log the number of points in each census tract
+                    // console.log(`Points in Tract ID ${censusTractId}: ${pointsInCensusTract.features.length}`);
 
                     // Store the count of hazard points for this census tract
                     hazardCounts[censusTractId] = pointsInCensusTract.features.length;
@@ -61,8 +61,8 @@ fetch('data/CensusTracts.geojson')
                     var hazardCount = hazardCounts[tractId] || 0;
                     var area = tractAreas[tractId] || 1; // Avoid division by zero
 
-                    // Log the calculation of normalized hazard count for debugging
-                    console.log(`Normalized Hazard Count for Tract ID ${tractId}: (Count: ${hazardCount} / Area: ${area})`);
+                    // // Log the calculation of normalized hazard count for debugging
+                    // console.log(`Normalized Hazard Count for Tract ID ${tractId}: (Count: ${hazardCount} / Area: ${area})`);
 
                     return (hazardCount / area) * 10000000; // Hazard count per square meter (multiplied by 10 million cause it aint showin)
                 }
