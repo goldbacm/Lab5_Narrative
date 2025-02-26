@@ -17,13 +17,13 @@ body {
 /* Ensure the map container has a height and width */
 #map1 {
     height: 640px;  /* Set the height as per your previous example */
-    width: 50%;    /* Optional: makes the map take full width of the container */
+    width: 100%;    /* Optional: makes the map take full width of the container */
 }
 
 /* Ensure the second map container has a height and width */
 #map2 {
     height: 640px;  /* Set the height as per your previous example */
-    width: 50%;
+    width: 100%;
     /*margin-top: 100px;    /* Optional: makes the map take full width of the container */
 }
 
